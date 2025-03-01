@@ -1,0 +1,162 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تعلم لغة Python</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>تعرف على لغة Python</h1>
+        <button id="toggle-mode">تبديل الوضع</button>
+    </header>
+
+    <main>
+        <section>
+            <h2>ما هي Python؟</h2>
+            <p>Python هي لغة برمجة عالية المستوى، سهلة التعلم والاستخدام، ومفتوحة المصدر. تتميز بكونها مفسّرة، وتُستخدم في العديد من المجالات مثل تطوير الويب، الذكاء الاصطناعي، وتحليل البيانات.</p>
+        </section>
+
+        <section>
+            <h2>لماذا تختار Python؟</h2>
+            <ul>
+                <li><strong>سهلة التعلم:</strong> كود بسيط يشبه الإنجليزية.</li>
+                <li><strong>متعددة الاستخدامات:</strong> تطوير الويب، الذكاء الاصطناعي، تحليل البيانات.</li>
+                <li><strong>مفتوحة المصدر:</strong> مجانية ومدعومة من المجتمع.</li>
+                <li><strong>مكتبات قوية:</strong> NumPy، Pandas، TensorFlow.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>أهم مميزات Python</h2>
+            <ul>
+                <li>سهولة القراءة والكتابة.</li>
+                <li>لغة مفسّرة، لا تحتاج إلى ترجمة.</li>
+                <li>إدارة تلقائية للذاكرة.</li>
+                <li>تدعم البرمجة الكائنية والوظيفية.</li>
+                <li>متوافقة مع لغات أخرى مثل C و Java.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>أشهر مكتبات Python</h2>
+            <ul>
+                <li><strong>NumPy:</strong> لمعالجة الأعداد والمصفوفات.</li>
+                <li><strong>Pandas:</strong> لتحليل البيانات.</li>
+                <li><strong>Matplotlib:</strong> لإنشاء الرسوم البيانية.</li>
+                <li><strong>TensorFlow:</strong> للتعلم العميق والذكاء الاصطناعي.</li>
+                <li><strong>Django:</strong> لتطوير الويب.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>أين تُستخدم Python؟</h2>
+            <ul>
+                <li><strong>تطوير الويب:</strong> باستخدام Django و Flask.</li>
+                <li><strong>تحليل البيانات:</strong> مع Pandas و NumPy.</li>
+                <li><strong>الذكاء الاصطناعي:</strong> باستخدام TensorFlow و PyTorch.</li>
+                <li><strong>الأمن السيبراني:</strong> لاختبار الاختراق.</li>
+                <li><strong>أتمتة المهام:</strong> لأتمتة العمليات المتكررة.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>كيف تبدأ تعلم Python؟</h2>
+            <ol>
+                <li>تثبيت Python من <a href="https://www.python.org/" target="_blank">python.org</a>.</li>
+                <li>استخدام بيئة تطوير مثل VS Code أو PyCharm.</li>
+                <li>تعلم الأساسيات مثل المتغيرات، الحلقات، الشروط، الدوال.</li>
+                <li>تطبيق عملي من خلال مشاريع صغيرة.</li>
+            </ol>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html><style>body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    transition: background 0.3s, color 0.3s;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #007bff;
+    color: white;
+    padding: 15px;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    background: white;
+    color: #007bff;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: #f0f0f0;
+}
+
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+section {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    background: #f8f9fa;
+}
+
+h2 {
+    color: #0056b3;
+}
+
+ul, ol {
+    padding-left: 20px;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* وضع داكن */
+.dark-mode {
+    background-color: #121212;
+    color: #eee;
+}
+
+.dark-mode header {
+    background: #444;
+}
+
+.dark-mode button {
+    background: #333;
+    color: white;
+}
+
+.dark-mode section {
+    background: #1e1e1e;
+}
+
+.dark-mode h2 {
+    color: #4da3ff;
+}</style><script>document.getElementById("toggle-mode").addEventListener("click", function() {
+    document.body.classList.toggle("dark-mode");
+});</script>

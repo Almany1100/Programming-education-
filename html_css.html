@@ -1,0 +1,229 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تعلم HTML وCSS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>مرحبًا بك في دورة HTML وCSS</h1>
+        <button id="theme-toggle">تبديل الوضع الداكن</button>
+    </header>
+
+    <main>
+        <!-- شرح HTML -->
+        <section class="tutorial-section">
+            <h2>ما هي HTML؟</h2>
+            <p>
+                HTML (لغة ترميز النصوص التشعبية) هي اللغة الأساسية لبناء صفحات الويب. تُستخدم لإنشاء هيكل الصفحة وتحديد العناصر مثل العناوين، الفقرات، الروابط، الصور، وغيرها.
+            </p>
+            <h3>أمثلة على عناصر HTML:</h3>
+            <pre>
+&lt;h1&gt;هذا عنوان رئيسي&lt;/h1&gt;
+&lt;p&gt;هذه فقرة نصية.&lt;/p&gt;
+&lt;a href="https://example.com"&gt;رابط&lt;/a&gt;
+&lt;img src="image.jpg" alt="وصف الصورة"&gt;
+            </pre>
+        </section>
+
+        <!-- شرح CSS -->
+        <section class="tutorial-section">
+            <h2>ما هي CSS؟</h2>
+            <p>
+                CSS (أوراق الأنماط المتتالية) هي اللغة المستخدمة لتنسيق عناصر HTML. تُستخدم لإضافة الألوان، الخطوط، المسافات، والتخطيطات إلى الصفحة.
+            </p>
+            <h3>أمثلة على CSS:</h3>
+            <pre>
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: #2196F3; /* لون أزرق */
+    text-align: center;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+            </pre>
+        </section>
+
+        <!-- مثال تفاعلي -->
+        <section class="tutorial-section">
+            <h2>جرب بنفسك!</h2>
+            <p>قم بتعديل الكود أدناه وشاهد النتيجة:</p>
+            <textarea id="html-code" placeholder="أدخل كود HTML هنا..."></textarea>
+            <textarea id="css-code" placeholder="أدخل كود CSS هنا..."></textarea>
+            <button onclick="updatePreview()">عرض النتيجة</button>
+            <div id="preview"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>تم التصميم بواسطة [Mohamed Antar]</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html><style>/* التصميم الأساسي */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #333333;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    background-color: #2196F3; /* لون أزرق */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    background-color: #2196F3; /* لون أزرق */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+button {
+    background-color: #333333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #555555;
+}
+
+/* تصميم أقسام الشرح */
+.tutorial-section {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+pre {
+    background-color: #e0e0e0;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#preview {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #ffffff;
+}
+
+/* إزالة العلامة التحتية من الروابط */
+a {
+    text-decoration: none; /* إزالة العلامة التحتية */
+    color: #2196F3; /* لون أزرق */
+}
+
+a:hover {
+    text-decoration: underline; /* إضافة علامة تحتية عند التمرير */
+}
+
+/* الوضع الداكن */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark-mode header,
+body.dark-mode footer {
+    background-color: #1f1f1f;
+}
+
+body.dark-mode button {
+    background-color: #ffffff;
+    color: #121212;
+}
+
+body.dark-mode .tutorial-section {
+    background-color: #1f1f1f;
+    color: #ffffff;
+}
+
+body.dark-mode pre {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+body.dark-mode textarea {
+    background-color: #333333;
+    color: #ffffff;
+    border-color: #555555;
+}
+
+body.dark-mode #preview {
+    background-color: #1f1f1f;
+    border-color: #555555;
+}
+
+body.dark-mode a {
+    color: #64B5F6; /* لون أزرق فاتح في الوضع الداكن */
+}</style><script>// تبديل الوضع الداكن
+const themeToggle = document.getElementById('theme-toggle');
+const body = document.body;
+
+themeToggle.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+
+    // حفظ التفضيل في localStorage
+    if (body.classList.contains('dark-mode')) {
+        localStorage.setItem('theme', 'dark');
+    } else {
+        localStorage.setItem('theme', 'light');
+    }
+});
+
+// تحميل التفضيل عند فتح الصفحة
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme === 'dark') {
+    body.classList.add('dark-mode');
+}
+
+// تحديث العرض التفاعلي
+function updatePreview() {
+    const htmlCode = document.getElementById('html-code').value;
+    const cssCode = document.getElementById('css-code').value;
+    const preview = document.getElementById('preview');
+
+    preview.innerHTML = htmlCode;
+    const style = document.createElement('style');
+    style.textContent = cssCode;
+    preview.appendChild(style);
+}</script>
